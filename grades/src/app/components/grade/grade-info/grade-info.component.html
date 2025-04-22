@@ -1,0 +1,58 @@
+<h2 mat-dialog-title>{{grade.name}}</h2>
+<mat-dialog-content>
+    {{grade.description}}<br>
+    <mat-divider></mat-divider>
+    <h3>Ключевые характеристики</h3>
+    <ul>
+        @for (characteristic of grade.characteristics; track characteristic) {
+            <li>{{characteristic}}</li>
+        }
+    </ul>
+    <mat-divider></mat-divider>
+    <h3>Hard skills (технические навыки)</h3>
+    <ul>
+        @for (hs of grade.hardSkills | keyvalue; track hs) {
+            <li>
+                <strong>{{hs.key}}</strong>
+                <ul>
+                    @for (hsv of hs.value; track hsv) {
+                        <li>{{hsv}}</li>
+                    }
+                </ul>
+            </li>
+        }
+    </ul>
+    <mat-divider></mat-divider>
+    <h3>Soft skills (гибкие навыки)</h3>
+    <ul>
+        @for (ss of grade.softSkills | keyvalue; track ss) {
+            <li>
+                <strong>{{ss.key}}</strong>
+                <ul>
+                    @for (ssv of ss.value; track ssv) {
+                        <li>{{ssv}}</li>
+                    }
+                </ul>
+            </li>
+        }
+    </ul>
+    <mat-divider></mat-divider>
+    <h3>Project skills (работа на проекте)</h3>
+    <ul>
+        @for (ps of grade.projectSkills | keyvalue; track ps) {
+            <li>
+                <strong>{{ps.key}}</strong>
+                <ul>
+                    @for (psv of ps.value; track psv) {
+                        <li>{{psv}}</li>
+                    }
+                </ul>
+            </li>
+        }
+    </ul>
+    <mat-divider></mat-divider>
+    <h3>Как оценить?</h3>
+    @for (htr of grade.howToRate; track htr) {
+        <p>{{htr}}</p>
+    }
+</mat-dialog-content>
