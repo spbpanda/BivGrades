@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { Grade } from '../../../pages/grades/grades.component';
 import { MAT_DIALOG_DATA, MatDialogContent, MatDialogRef, MatDialogTitle } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { KeyValuePipe } from '@angular/common';
 import { MatDividerModule } from '@angular/material/divider';
+import { Grade } from '../../../models/grade.models';
 
 @Component({
   selector: 'app-grade-info',

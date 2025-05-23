@@ -1,0 +1,14 @@
+<button
+  class="sbi-button"
+  [type]="type"
+  [ngClass]="{
+        'sbi-button--large': size === 'large',
+        'sbi-button--small': size === 'small',
+    }"
+  class="sbi-button--{{ appearance }}"
+  mat-flat-button
+  color="primary"
+  [disabled]="disabled"
+  [attr.data-testid]="testId">
+  <ng-content></ng-content>
+</button>

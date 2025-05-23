@@ -1,0 +1,21 @@
+.workers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+
+    .worker-block {
+        border: 1px solid #B7B7D2;
+        border-radius: 24px;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,.05), 0 1px 2px 0 rgba(0,0,0,.05), 0 1px 2px 0 rgba(0,0,0,.05);
+        &__title {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+        }
+        &__count {
+            font-size: 24px;
+            font-weight: 800;
+            padding: 1rem 1.5rem;
+        }
+    }
+}

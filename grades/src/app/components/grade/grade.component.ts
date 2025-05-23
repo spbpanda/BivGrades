@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Grade } from '../../pages/grades/grades.component';
+import { Grade } from '../../models/grade.models';
 
 @Component({
   selector: 'app-grade',

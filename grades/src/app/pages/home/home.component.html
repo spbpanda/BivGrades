@@ -1,0 +1,11 @@
+<div class="page">
+    <h3>Новый подход к оценке грейдов всех линейных сотрудников компании</h3>
+    <div class="workers">
+        @for (worker of workers; track $index) {
+            <div class="worker-block">
+                <div class="worker-block__title">{{worker.name}}</div>
+                <div class="worker-block__count">{{worker.count}}</div>
+            </div>
+        }
+    </div>
+</div>

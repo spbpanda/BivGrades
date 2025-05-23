@@ -1,0 +1,45 @@
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #3C4143;
+    cursor: pointer;
+    &:hover {
+        color: #0057FF;
+    }
+}
+
+.routes {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+    a {
+        font-size: 20px;
+        color: #3C4143;
+        text-decoration: none;
+        &:hover {
+            color: #0057FF;
+        }
+        cursor: pointer;
+    }
+    .active-link {
+        color: #0057FF;
+    }
+}
+
+.toolbar {
+    box-shadow: 0 0 14px rgba(60, 65, 67, 0.25);
+}
+
+::ng-deep {
+    .mat-mdc-menu-panel.menu {
+        border-radius: 24px;
+        background-color: #fff;
+        .mat-mdc-menu-item {
+            padding: 0 1rem;
+            &:hover {
+                color: #0057FF;
+            }
+        }
+    }
+}

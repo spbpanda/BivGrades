@@ -2,8 +2,21 @@
 
 @include mat.core();
 
-html, body {
+$my-theme: mat.define-theme((
+ color: (
+    theme-type: light,
+    primary: mat.$violet-palette,
+  ),
+));
+
+html, body {  
+    @include mat.core-theme($my-theme);
+    @include mat.button-theme($my-theme);
     height: 100%;
     margin: 0;
     padding: 0;
+}
+
+.page {
+    padding: 1rem;
 }
