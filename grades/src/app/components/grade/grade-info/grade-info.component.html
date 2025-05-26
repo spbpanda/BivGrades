@@ -1,13 +1,15 @@
 <h2 mat-dialog-title>{{grade.name}}</h2>
 <mat-dialog-content>
     {{grade.description}}<br>
-    <mat-divider></mat-divider>
-    <h3>Ключевые характеристики</h3>
-    <ul>
-        @for (characteristic of grade.characteristics; track characteristic) {
-            <li>{{characteristic}}</li>
-        }
-    </ul>
+    @if (grade.characteristics && grade.characteristics.length > 0) {
+        <mat-divider></mat-divider>
+        <h3>Ключевые характеристики</h3>
+        <ul>
+            @for (characteristic of grade.characteristics; track characteristic) {
+                <li>{{characteristic}}</li>
+            }
+        </ul>
+    }
     <mat-divider></mat-divider>
     <h3>Образование</h3>
     <ul>
@@ -82,9 +84,27 @@
             </li>
         }
     </ul>
-    <mat-divider></mat-divider>
-    <h3>Как оценить?</h3>
-    @for (htr of grade.howToRate; track htr) {
-        <p>{{htr}}</p>
+    @if (grade.howToRate && grade.howToRate.length > 0) {
+        <mat-divider></mat-divider>
+        <h3>Как оценить?</h3>
+        @for (htr of grade.howToRate; track htr) {
+            <p>{{htr}}</p>
+        }
+    }
+    @if (grade.questions && grade.questions.size > 0) {
+        <mat-divider></mat-divider>
+        <h3>Вопросы</h3>
+        <ul>
+        @for (q of grade.questions | keyvalue; track q) {
+            <li>
+                <strong>{{q.key}}</strong>
+                <ul>
+                    @for (qv of q.value; track qv) {
+                        <li>{{qv}}</li>
+                    }
+                </ul>
+            </li>
+        }
+        </ul>
     }
 </mat-dialog-content>

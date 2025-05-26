@@ -15,6 +15,7 @@ export interface Grade {
   hardSkills: Map<string, string[]>;
   softSkills: Map<string, string[]>;
   projectSkills: Map<string, string[]>;
-  howToRate: string[];
+  questions?: Map<string, string[]>;
+  howToRate?: string[];
   imageUrl: string;
 }
