@@ -1,126 +1,128 @@
 <h2 mat-dialog-title>{{grade.name}}</h2>
 <mat-dialog-content>
-    {{grade.description}}<br>
-    @if (grade.characteristics && grade.characteristics.length > 0) {
+    <div>
+        {{grade.description}}<br>
+        @if (grade.characteristics && grade.characteristics.length > 0) {
         <mat-divider></mat-divider>
         <h3>Ключевые характеристики</h3>
         <ul>
             @for (characteristic of grade.characteristics; track characteristic) {
-                <li>{{characteristic}}</li>
+            <li>{{characteristic}}</li>
             }
         </ul>
-    }
-    <mat-divider></mat-divider>
-    <h3>Образование</h3>
-    <ul>
-        <li>
-            <strong>Формальное</strong><br>
-            <span>{{grade.education.formal}}</span>
-        </li>
-        <li>
-            <strong>Самообразование</strong><br>
-            <span>{{grade.education.self}}</span>
-        </li>
-    </ul>
-    <mat-divider></mat-divider>
-    <h3>Опыт</h3>
-    <ul>
-        <li>
-            <strong>Общий стаж</strong><br>
-            <span>{{grade.experience.total}}</span>
-        </li>
-        <li>
-            <strong>Проектный опыт</strong><br>
-            <span>{{grade.experience.project}}</span>
-        </li>
-        <li>
-            <strong>Сложность проектов</strong><br>
-            <span>{{grade.experience.difficulty}}</span>
-        </li>
-        <li>
-            <strong>Размер команд</strong><br>
-            <span>{{grade.experience.teamSize}}</span>
-        </li>
-    </ul>
-    <mat-divider></mat-divider>
-    <h3>Hard skills (технические навыки)</h3>
-    <ul>
-        @for (hs of grade.hardSkills | keyvalue; track hs) {
+        }
+        <mat-divider></mat-divider>
+        <h3>Образование</h3>
+        <ul>
+            <li>
+                <strong>Формальное</strong><br>
+                <span>{{grade.education.formal}}</span>
+            </li>
+            <li>
+                <strong>Самообразование</strong><br>
+                <span>{{grade.education.self}}</span>
+            </li>
+        </ul>
+        <mat-divider></mat-divider>
+        <h3>Опыт</h3>
+        <ul>
+            <li>
+                <strong>Общий стаж</strong><br>
+                <span>{{grade.experience.total}}</span>
+            </li>
+            <li>
+                <strong>Проектный опыт</strong><br>
+                <span>{{grade.experience.project}}</span>
+            </li>
+            <li>
+                <strong>Сложность проектов</strong><br>
+                <span>{{grade.experience.difficulty}}</span>
+            </li>
+            <li>
+                <strong>Размер команд</strong><br>
+                <span>{{grade.experience.teamSize}}</span>
+            </li>
+        </ul>
+        <mat-divider></mat-divider>
+        <h3>Hard skills (технические навыки)</h3>
+        <ul>
+            @for (hs of grade.hardSkills | keyvalue; track hs) {
             <li>
                 <strong>{{hs.key}}</strong>
                 <ul>
                     @for (hsv of hs.value; track hsv) {
-                        <li>{{hsv}}</li>
+                    <li>{{hsv}}</li>
                     }
                 </ul>
             </li>
-        }
-    </ul>
-    <mat-divider></mat-divider>
-    <h3>Soft skills (гибкие навыки)</h3>
-    <ul>
-        @for (ss of grade.softSkills | keyvalue; track ss) {
+            }
+        </ul>
+        <mat-divider></mat-divider>
+        <h3>Soft skills (гибкие навыки)</h3>
+        <ul>
+            @for (ss of grade.softSkills | keyvalue; track ss) {
             <li>
                 <strong>{{ss.key}}</strong>
                 <ul>
                     @for (ssv of ss.value; track ssv) {
-                        <li>{{ssv}}</li>
+                    <li>{{ssv}}</li>
                     }
                 </ul>
             </li>
-        }
-    </ul>
-    <mat-divider></mat-divider>
-    <h3>Project skills (работа на проекте)</h3>
-    <ul>
-        @for (ps of grade.projectSkills | keyvalue; track ps) {
+            }
+        </ul>
+        <mat-divider></mat-divider>
+        <h3>Project skills (работа на проекте)</h3>
+        <ul>
+            @for (ps of grade.projectSkills | keyvalue; track ps) {
             <li>
                 <strong>{{ps.key}}</strong>
                 <ul>
                     @for (psv of ps.value; track psv) {
-                        <li>{{psv}}</li>
+                    <li>{{psv}}</li>
                     }
                 </ul>
             </li>
-        }
-    </ul>
-    @if (grade.howToRate && grade.howToRate.length > 0) {
+            }
+        </ul>
+        @if (grade.howToRate && grade.howToRate.length > 0) {
         <mat-divider></mat-divider>
         <h3>Как оценить?</h3>
         @for (htr of grade.howToRate; track htr) {
-            <p>{{htr}}</p>
+        <p>{{htr}}</p>
         }
-    }
-    @if (grade.questions && grade.questions.size > 0) {
+        }
+        @if (grade.questions && grade.questions.size > 0) {
         <mat-divider></mat-divider>
         <h3>Вопросы</h3>
         <ul>
-        @for (q of grade.questions | keyvalue; track q) {
+            @for (q of grade.questions | keyvalue; track q) {
             <li>
                 <strong>{{q.key}}</strong>
                 <ul>
                     @for (qv of q.value; track qv) {
-                        <li>{{qv}}</li>
+                    <li>{{qv}}</li>
                     }
                 </ul>
             </li>
-        }
+            }
         </ul>
-    }
-    @if (grade.recommendations && grade.recommendations.size > 0) {
+        }
+        @if (grade.recommendations && grade.recommendations.size > 0) {
         <mat-divider></mat-divider>
         <h3>Рекомендации для развития</h3>
         <ul>
-        @for (r of grade.recommendations | keyvalue; track r) {
+            @for (r of grade.recommendations | keyvalue; track r) {
             <li>
                 <strong>{{r.key}}</strong>
                 <ul>
                     @for (rv of r.value; track rv) {
-                        <li>{{rv}}</li>
+                    <li>{{rv}}</li>
                     }
                 </ul>
             </li>
-        }
+            }
         </ul>
-    }
+        }
+    </div>
 </mat-dialog-content>
