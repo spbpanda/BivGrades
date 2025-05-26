@@ -2,7 +2,7 @@ import { Grade } from '../../../models/grade.models';
 
 export const SYSTEM_GRADES: Grade[] = [
   {
-    name: 'Junior -',
+    name: 'Junior младший',
     description:
       'Начинающий аналитик с базовыми знаниями, изучает основы анализа, решает простые задачи под руководством.',
     education: {
@@ -228,7 +228,7 @@ export const SYSTEM_GRADES: Grade[] = [
     imageUrl: '/assets/junior2.png',
   },
   {
-    name: 'Junior +',
+    name: 'Junior старший',
     description:
       'Аналитик с опытом 2-3 года, самостоятельно выполняет типовые задачи, взаимодействует с пользователями.',
     education: {
@@ -351,7 +351,7 @@ export const SYSTEM_GRADES: Grade[] = [
     imageUrl: '/assets/junior3.png',
   },
   {
-    name: 'Middle -',
+    name: 'Middle младший',
     description:
       'Опытный аналитик (2-4 лет), самостоятельно ведет отдельные части проекта, взаимодействует с заказчиками.',
     education: {
@@ -589,7 +589,7 @@ export const SYSTEM_GRADES: Grade[] = [
     imageUrl: '/assets/middle2.jpg',
   },
   {
-    name: 'Middle +',
+    name: 'Middle старший',
     description:
       'Опытный аналитик (5-7 лет), ведет небольшие проекты или крупные функциональные блоки, управляет требованиями.',
     education: {
@@ -731,7 +731,7 @@ export const SYSTEM_GRADES: Grade[] = [
     imageUrl: '/assets/middle3.jpg',
   },
   {
-    name: 'Senior -',
+    name: 'Senior младший',
     description:
       'Эксперт с 7-10 годами опыта, ведет сложные проекты целиком, управляет требованиями на всех этапах, отвечает за аналитику в крупных проектах.',
     education: {
