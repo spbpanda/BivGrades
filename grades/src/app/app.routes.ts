@@ -14,6 +14,14 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/developers/backend-developers/backend-developers.component').then(m => m.BackendDevelopersComponent),
     },
     {
+        path: 'system-analytics',
+        loadComponent: () => import('./pages/analytics/system-analytics/system-analytics.component').then(m => m.SystemAnalyticsComponent),
+    },
+    {
+        path: 'business-analytics',
+        loadComponent: () => import('./pages/analytics/business-analytics/business-analytics.component').then(m => m.BusinessAnalyticsComponent),
+    },
+    {
         path: '**',
         redirectTo: '/'
     }

@@ -2,7 +2,7 @@
     <span class="title" [routerLink]="['']">BIV Grades</span>
     <div class="routes">
         <a [matMenuTriggerFor]="menuDev" routerLinkActive="active-link">Developers</a>
-        <a [routerLink]="['/grades']" routerLinkActive="active-link">Analytics</a>
+        <a [matMenuTriggerFor]="menuAnalytics" routerLinkActive="active-link">Analytics</a>
     </div>
 </mat-toolbar>
 <router-outlet></router-outlet>
@@ -10,4 +10,8 @@
 <mat-menu #menuDev="matMenu" class="menu">
     <button mat-menu-item [routerLink]="['/frontend-developers']">Frontend</button>
     <button mat-menu-item [routerLink]="['/backend-developers']">Backend</button>
+</mat-menu>
+<mat-menu #menuAnalytics="matMenu" class="menu">
+    <button mat-menu-item [routerLink]="['/system-analytics']">System</button>
+    <button mat-menu-item [routerLink]="['/business-analytics']">Business</button>
 </mat-menu>

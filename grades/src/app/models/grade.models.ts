@@ -18,4 +18,5 @@ export interface Grade {
   questions?: Map<string, string[]>;
   howToRate?: string[];
   imageUrl: string;
+  recommendations?: Map<string, string[]>;
 }

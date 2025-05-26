@@ -1,4 +1,4 @@
-import { Grade } from '../models/grade.models';
+import { Grade } from '../../../models/grade.models';
 
 export const FRONTEND_GRADES: Grade[] = [
   {

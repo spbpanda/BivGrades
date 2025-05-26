@@ -107,4 +107,20 @@
         }
         </ul>
     }
+    @if (grade.recommendations && grade.recommendations.size > 0) {
+        <mat-divider></mat-divider>
+        <h3>Рекомендации для развития</h3>
+        <ul>
+        @for (r of grade.recommendations | keyvalue; track r) {
+            <li>
+                <strong>{{r.key}}</strong>
+                <ul>
+                    @for (rv of r.value; track rv) {
+                        <li>{{rv}}</li>
+                    }
+                </ul>
+            </li>
+        }
+        </ul>
+    }
 </mat-dialog-content>
