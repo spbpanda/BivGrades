@@ -24,7 +24,7 @@
     <mat-drawer-content>
         <div class="grade-list">
             @for (grade of grades; track grade) {
-                <app-grade [grade]="grade" (click)="openGradeInfo(grade)"></app-grade>
+                <app-grade [grade]="grade" (click)="openGradeInfo(grade)" [style.view-transition-name]="grade.name"></app-grade>
             }
         </div>
     </mat-drawer-content>

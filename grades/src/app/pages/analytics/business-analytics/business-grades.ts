@@ -2,7 +2,7 @@ import { Grade } from '../../../models/grade.models';
 
 export const BUSINESS_GRADES: Grade[] = [
   {
-    name: 'Junior',
+    name: 'Junior L2',
     description:
       'Начинающий аналитик. Может решать простые аналитические задачи (доработки существующих функционалов или простые новые)',
     education: {
@@ -76,7 +76,7 @@ export const BUSINESS_GRADES: Grade[] = [
     imageUrl: '/assets/junior2.png',
   },
   {
-    name: 'Middle',
+    name: 'Middle L2',
     description:
       'Опытный  аналитик. Может самостоятельно вести крупные функциональные блоки',
     education: {
@@ -220,7 +220,7 @@ export const BUSINESS_GRADES: Grade[] = [
     imageUrl: '/assets/middle2.jpg',
   },
   {
-    name: 'Senior',
+    name: 'Senior L2',
     description:
       'Эксперт с 10+ годами опыта, главный аналитик. Может вести большие приложения. Вести проекты как главный аналитик.',
     education: {

@@ -2,7 +2,7 @@ import { Grade } from '../../../models/grade.models';
 
 export const BACKEND_GRADES: Grade[] = [
   {
-    name: 'Junior младший',
+    name: 'Junior L1',
     description:
       'Начинающий разработчик с неоконченным образованием, изучает базовые концепции Java и Quarkus, решает простые задачи под руководством.',
     education: {
@@ -108,7 +108,7 @@ export const BACKEND_GRADES: Grade[] = [
     imageUrl: '/assets/junior1.png',
   },
   {
-    name: 'Junior',
+    name: 'Junior L2',
     description:
       'Выпускник технического вуза, с опытом разработки до 1 года, участвует в небольших проектах, самостоятельно решает задачи средней сложности.',
     education: {
@@ -192,7 +192,7 @@ export const BACKEND_GRADES: Grade[] = [
     imageUrl: '/assets/junior2.png',
   },
   {
-    name: 'Junior старший',
+    name: 'Junior L3',
     description:
       'Разработчик с опытом разработки 1-2 года, участвует в коммерческих проектах, решает сложные задачи, углубленно изучает Quarkus и Hibernate.',
     education: {
@@ -274,7 +274,7 @@ export const BACKEND_GRADES: Grade[] = [
     imageUrl: '/assets/junior3.png',
   },
   {
-    name: 'Middle младший',
+    name: 'Middle L1',
     description:
       'Опытный разработчик (2–4 года), работает со всеми технологиями проекта, координирует задачи в командах.',
     education: {
@@ -361,7 +361,7 @@ export const BACKEND_GRADES: Grade[] = [
     imageUrl: '/assets/middle1.jpg',
   },
   {
-    name: 'Middle',
+    name: 'Middle L2',
     description:
       'Специалист с экспертизой в распределенных системах, с опытом 4-6 лет в разработке, лидирует в части задач, управляет техническим долгом.',
     education: {
@@ -449,7 +449,7 @@ export const BACKEND_GRADES: Grade[] = [
     imageUrl: '/assets/middle2.jpg',
   },
   {
-    name: 'Middle старший',
+    name: 'Middle L3',
     description:
       'Эксперт в архитектуре микросервисов, лидирует различные направления в команде. решает межкомандные вопросы.',
     education: {
@@ -533,7 +533,7 @@ export const BACKEND_GRADES: Grade[] = [
     imageUrl: '/assets/middle3.jpg',
   },
   {
-    name: 'Senior младший',
+    name: 'Senior L1',
     description:
       'Эксперт с 8+ годами опыта, который переходит от решения тактических задач к стратегическим. Он не просто пишет код, а формирует стандарты разработки в компании, лидирует подпроекты и адаптирует технологии под бизнес-цели.',
     education: {
@@ -616,7 +616,7 @@ export const BACKEND_GRADES: Grade[] = [
     imageUrl: '/assets/senior1.jpg',
   },
   {
-    name: 'Senior',
+    name: 'Senior L2',
     description:
       'Эксперт с 10+ годами опыта, который управляет продуктами и технологической стратегией компании. Он не только решает глобальные технические задачи, но и влияет на бизнес-решения, формирует стандарты разработки на уровне организации и внедряет инновационные подходы.',
     education: {
@@ -708,7 +708,7 @@ export const BACKEND_GRADES: Grade[] = [
     imageUrl: '/assets/senior2.jpg',
   },
   {
-    name: 'Senior старший',
+    name: 'Senior L3',
     description:
       'Эксперт с 12+ годами опыта, который управляет продуктами и технологической стратегией компании. Он не только решает глобальные технические задачи, но и влияет на бизнес-решения, формирует стандарты разработки на уровне организации и внедряет инновационные подходы.',
     education: {
