@@ -1,3 +1,84 @@
+.home-presentation {
+  max-width: 800px;
+  margin: 32px auto 24px auto;
+  padding: 32px 24px;
+  background: var(--md-sys-color-surface-container, #fff);
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  text-align: center;
+  animation: fadeIn 0.7s;
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    color: var(--md-sys-color-primary, #0057FF);
+    margin-bottom: 1.5rem;
+  }
+  .idea {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .toggle-btn {
+    background: var(--md-sys-color-primary, #0057FF);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    transition: background 0.2s;
+    &:hover {
+      background: #003ab2;
+    }
+  }
+  .details {
+    text-align: left;
+    margin-top: 1.5rem;
+    h3 {
+      margin-top: 1.2rem;
+      font-size: 1.1rem;
+      color: var(--md-sys-color-primary, #0057FF);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        .material-icons {
+          color: #4caf50;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    .for-whom {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      .for-whom-block {
+        background: var(--md-sys-color-surface, #f8f8ff);
+        border-radius: 12px;
+        padding: 1rem;
+        min-width: 180px;
+        flex: 1 1 0;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: none;}
+}
+
 .workers {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

@@ -1,4 +1,4 @@
-import { Component, effect, inject } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +8,31 @@ import { Component, effect, inject } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  workers = [
-    {name: 'Developers', count: '70'},
-    {name: 'Analytics', count: '7'},
-  ]
+  showDetails = false;
+
+  toggleDetails() {
+    this.showDetails = !this.showDetails;
+  }
+
+  presentation = {
+    title: 'BivGrades — грейды и развитие в BIV',
+    subtitle: 'Прозрачная система развития и оценки сотрудников',
+    idea: 'BivGrades — это внутренний инструмент компании BIV для прозрачного управления грейдами (уровнями развития) сотрудников в IT-направлениях: frontend, backend, системная и бизнес-аналитика.',
+    benefits: [
+      'Стандартизация требований и прозрачность развития',
+      'Планирование индивидуального роста',
+      'Объективная и справедливая оценка',
+      'Управление ожиданиями между сотрудниками и руководством'
+    ],
+    forWhom: [
+      { title: 'Сотрудникам', text: 'Понимание, что развивать для роста, отслеживание прогресса, чёткие ориентиры для перехода на следующий грейд.' },
+      { title: 'Руководителям', text: 'Быстрая и прозрачная оценка, инструмент для performance review, помощь в формировании команд.' },
+      { title: 'HR и компании', text: 'Единый стандарт грейдов, упрощение адаптации, повышение прозрачности карьерного роста.' }
+    ],
+    examples: [
+      'Сотрудник: хочу перейти с Junior L2 на Middle L1 — смотрю требования, планирую развитие.',
+      'Руководитель: провожу performance review — сверяю достижения с грейдом, обсуждаю зоны роста.',
+      'HR: внедряю грейдовую систему — использую BivGrades как базу для адаптации и обучения.'
+    ]
+  };
 }

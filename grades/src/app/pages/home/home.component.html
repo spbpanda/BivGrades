@@ -1,11 +1,39 @@
-<div class="page">
-    <h3>Новый подход к оценке грейдов всех линейных сотрудников компании</h3>
-    <div class="workers">
-        @for (worker of workers; track $index) {
-            <div class="worker-block">
-                <div class="worker-block__title">{{worker.name}}</div>
-                <div class="worker-block__count">{{worker.count}}</div>
+<div class="home-presentation">
+    <h1>{{ presentation.title }}</h1>
+    <h2>{{ presentation.subtitle }}</h2>
+    <p class="idea">{{ presentation.idea }}</p>
+  
+    <button class="toggle-btn" (click)="toggleDetails()">
+      {{ showDetails ? 'Скрыть детали' : 'Подробнее о пользе и примерах' }}
+    </button>
+  
+    @if (showDetails) {
+      <div class="details">
+        <h3>Преимущества</h3>
+        <ul>
+          @for (benefit of presentation.benefits; track benefit) {
+            <li>
+              <span class="material-icons">check_circle</span> {{ benefit }}
+            </li>
+          }
+        </ul>
+        <h3>Кому полезно</h3>
+        <div class="for-whom">
+          @for (item of presentation.forWhom; track item.title) {
+            <div class="for-whom-block">
+              <strong>{{ item.title }}</strong>
+              <p>{{ item.text }}</p>
             </div>
-        }
-    </div>
+          }
+        </div>
+        <h3>Примеры использования</h3>
+        <ul>
+          @for (ex of presentation.examples; track ex) {
+            <li>
+              <span class="material-icons">lightbulb</span> {{ ex }}
+            </li>
+          }
+        </ul>
+      </div>
+    }
 </div>

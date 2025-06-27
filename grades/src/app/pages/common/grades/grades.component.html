@@ -1,29 +1,88 @@
 <mat-drawer-container class="sidenav-container">
     <mat-drawer mode="side" opened class="drawer-container">
         <div class="filter-container">
-            <span class="title">Фильтр</span>
+            <div class="filter-header">
+                <span class="title">Фильтр</span>
+                <button mat-icon-button (click)="resetFilters()" matTooltip="Сбросить все фильтры">
+                    <mat-icon class="material-icons">refresh</mat-icon>
+                </button>
+            </div>
+
+            <mat-form-field class="search-field">
+                <mat-label>Поиск по названию</mat-label>
+                <input matInput [(ngModel)]="searchQuery" (ngModelChange)="applyFilters()">
+                <mat-icon matSuffix class="material-icons">search</mat-icon>
+            </mat-form-field>
+
             <div class="filters">
-                <div class="filter-title">
-                    Образование
-                </div>
-                <div class="filter-title">
-                    Опыт
-                </div>
-                <div class="filter-title">
-                    Hard skills
-                </div>
-                <div class="filter-title">
-                    Soft skills
-                </div>
-                <div class="filter-title">
-                    Project skills
-                </div>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>Образование</mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-form-field>
+                        <mat-label>Формальное образование</mat-label>
+                        <mat-select [(ngModel)]="filters.education.formal" (selectionChange)="applyFilters()" multiple>
+                            <mat-option *ngFor="let edu of educationOptions" [value]="edu">{{edu}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>Опыт</mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-form-field>
+                        <mat-label>Общий опыт</mat-label>
+                        <mat-select [(ngModel)]="filters.experience.total" (selectionChange)="applyFilters()" multiple>
+                            <mat-option *ngFor="let exp of experienceOptions" [value]="exp">{{exp}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Размер команды</mat-label>
+                        <mat-select [(ngModel)]="filters.experience.teamSize" (selectionChange)="applyFilters()" multiple>
+                            <mat-option *ngFor="let size of teamSizeOptions" [value]="size">{{size}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>Hard skills</mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-selection-list [(ngModel)]="filters.hardSkills" (selectionChange)="applyFilters()">
+                        <mat-list-option *ngFor="let skill of hardSkillsOptions" [value]="skill">
+                            {{skill}}
+                        </mat-list-option>
+                    </mat-selection-list>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>Soft skills</mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-selection-list [(ngModel)]="filters.softSkills" (selectionChange)="applyFilters()">
+                        <mat-list-option *ngFor="let skill of softSkillsOptions" [value]="skill">
+                            {{skill}}
+                        </mat-list-option>
+                    </mat-selection-list>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>Project skills</mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-selection-list [(ngModel)]="filters.projectSkills" (selectionChange)="applyFilters()">
+                        <mat-list-option *ngFor="let skill of projectSkillsOptions" [value]="skill">
+                            {{skill}}
+                        </mat-list-option>
+                    </mat-selection-list>
+                </mat-expansion-panel>
             </div>
         </div>
     </mat-drawer>
     <mat-drawer-content>
         <div class="grade-list">
-            @for (grade of grades; track grade) {
+            @for (grade of filteredGrades; track grade) {
                 <app-grade [grade]="grade" (click)="openGradeInfo(grade)" [style.view-transition-name]="grade.name"></app-grade>
             }
         </div>

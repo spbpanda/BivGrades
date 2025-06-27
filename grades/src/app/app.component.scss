@@ -1,3 +1,45 @@
+.mat-app-background {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar {
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    
+    .title {
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--md-sys-color-on-surface);
+    }
+
+    .routes {
+        margin-left: 2rem;
+        display: flex;
+        gap: 1rem;
+
+        a {
+            color: #3C4143;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+
+            &:hover {
+                color: #0057FF;
+            }
+
+            &.active-link {
+                color: #0057FF;
+            }
+        }
+    }
+}
+
+.menu {
+    border-radius: 8px;
+}
+
 .title {
     font-size: 24px;
     font-weight: 600;
