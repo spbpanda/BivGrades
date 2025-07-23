@@ -12,18 +12,6 @@
         </ul>
         }
         <mat-divider></mat-divider>
-        <h3>Образование</h3>
-        <ul>
-            <li>
-                <strong>Формальное</strong><br>
-                <span>{{grade.education.formal}}</span>
-            </li>
-            <li>
-                <strong>Самообразование</strong><br>
-                <span>{{grade.education.self}}</span>
-            </li>
-        </ul>
-        <mat-divider></mat-divider>
         <h3>Опыт</h3>
         <ul>
             <li>
@@ -44,7 +32,7 @@
             </li>
         </ul>
         <mat-divider></mat-divider>
-        <h3>Hard skills (технические навыки)</h3>
+        <h3>Технические навыки</h3>
         <ul>
             @for (hs of grade.hardSkills | keyvalue; track hs) {
             <li>
@@ -58,7 +46,7 @@
             }
         </ul>
         <mat-divider></mat-divider>
-        <h3>Soft skills (гибкие навыки)</h3>
+        <h3>Не технические навыки</h3>
         <ul>
             @for (ss of grade.softSkills | keyvalue; track ss) {
             <li>
@@ -72,7 +60,7 @@
             }
         </ul>
         <mat-divider></mat-divider>
-        <h3>Project skills (работа на проекте)</h3>
+        <h3>Проектные навыки</h3>
         <ul>
             @for (ps of grade.projectSkills | keyvalue; track ps) {
             <li>

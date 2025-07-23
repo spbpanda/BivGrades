@@ -17,18 +17,6 @@
             <div class="filters">
                 <mat-expansion-panel>
                     <mat-expansion-panel-header>
-                        <mat-panel-title>Образование</mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <mat-form-field>
-                        <mat-label>Формальное образование</mat-label>
-                        <mat-select [(ngModel)]="filters.education.formal" (selectionChange)="applyFilters()" multiple>
-                            <mat-option *ngFor="let edu of educationOptions" [value]="edu">{{edu}}</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </mat-expansion-panel>
-
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
                         <mat-panel-title>Опыт</mat-panel-title>
                     </mat-expansion-panel-header>
                     <mat-form-field>

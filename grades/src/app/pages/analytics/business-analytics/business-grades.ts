@@ -2,7 +2,7 @@ import { Grade } from '../../../models/grade.models';
 
 export const BUSINESS_GRADES: Grade[] = [
   {
-    name: 'Стажер',
+    name: 'Intern',
     description:
       'Сотрудник без опыта, в процессе получения образования.',
     education: {
@@ -106,7 +106,7 @@ export const BUSINESS_GRADES: Grade[] = [
     ])
   },
   {
-    name: 'Junior L1',
+    name: 'Junior J1',
     description:
       'Начинающий аналитик без или с минимальным опытом. Обладает начальными софт-скиллами, решает простые задачи под руководством.',
     education: {
@@ -239,7 +239,7 @@ export const BUSINESS_GRADES: Grade[] = [
     ])
   },
   {
-    name: 'Junior L2',
+    name: 'Junior J2',
     description:
       'Начинающий аналитик с минимальным опытом. Может решать простые задачи под руководством опытных коллег.',
     education: {
@@ -304,7 +304,7 @@ export const BUSINESS_GRADES: Grade[] = [
       ],
       [
         'Менторство/Наставничество',
-        ['Может показать/рассказать стажеру как организована работа.'],
+        ['Может показать/рассказать Internу как организована работа.'],
       ],
     ]),
     projectSkills: new Map([]),
@@ -372,7 +372,7 @@ export const BUSINESS_GRADES: Grade[] = [
     ])
   },
   {
-    name: 'Junior L3',
+    name: 'Junior J3',
     description:
       'Аналитик с опытом от 2 лет, самостоятельно выполняет типовые задачи, взаимодействует с заказчиком.',
     education: {
@@ -556,7 +556,7 @@ export const BUSINESS_GRADES: Grade[] = [
     ])
   },
   {
-    name: 'Middle L1',
+    name: 'Middle M1',
     description:
       'Аналитик с опытом 3-4 года, способный самостоятельно вести части проекта, взаимодействует с командой и заказчиками.',
     education: {
@@ -741,7 +741,7 @@ export const BUSINESS_GRADES: Grade[] = [
     ])
   },
   {
-    name: 'Middle L2',
+    name: 'Middle M2',
     description:
       'Опытный аналитик (4+ лет). Может самостоятельно вести части проекта, взаимодействует с командой и заказчиками.',
     education: {
@@ -934,7 +934,7 @@ export const BUSINESS_GRADES: Grade[] = [
     ])
   },
   {
-    name: 'Middle L3',
+    name: 'Middle M3',
     description:
       'Опытный аналитик (4-5 лет), ведет небольшие проекты или крупные функциональные блоки, управляет требованиями.',
     education: {
@@ -1144,7 +1144,7 @@ export const BUSINESS_GRADES: Grade[] = [
     ])
   },
   {
-    name: 'Senior L1',
+    name: 'Senior S1',
     description:
       'Эксперт с 5-7 годами опыта, ведет сложные проекты целиком, управляет требованиями на всех этапах, отвечает за аналитику в крупных проектах.',
     education: {
@@ -1350,7 +1350,7 @@ export const BUSINESS_GRADES: Grade[] = [
     ])
   },
   {
-    name: 'Senior L2',
+    name: 'Senior S2',
     description:
       'Эксперт с 7-10 годами опыта. Может вести большие приложения. Вести проекты как главный аналитик, координировать работу нескольких аналитиков на крупных проектах.',
     education: {
@@ -1555,7 +1555,7 @@ export const BUSINESS_GRADES: Grade[] = [
     ]),
   },
   {
-    name: 'Senior L3',
+    name: 'Senior S3',
     description:
       'Эксперт с 10+ годами опыта, выстраивает процессы аналитики в масштабах компании, управляет портфелем проектов, участвует в формировании бизнес-стратегии.',
     education: {

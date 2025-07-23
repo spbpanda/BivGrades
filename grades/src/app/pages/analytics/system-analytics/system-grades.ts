@@ -2,7 +2,7 @@ import { Grade } from '../../../models/grade.models';
 
 export const SYSTEM_GRADES: Grade[] = [
   {
-    name: 'Стажер',
+    name: 'Intern',
     description:
       'Сотрудник без опыта, в процессе получения образования.',
     education: {
@@ -148,7 +148,7 @@ export const SYSTEM_GRADES: Grade[] = [
     imageUrl: '/assets/intern.png',
   },
   {
-    name: 'Junior L1',
+    name: 'Junior J1',
     description:
       'Начинающий аналитик с базовыми знаниями, изучает основы анализа, решает простые задачи под руководством.',
     education: {
@@ -319,7 +319,7 @@ export const SYSTEM_GRADES: Grade[] = [
     imageUrl: '/assets/junior1.png',
   },
   {
-    name: 'Junior L2',
+    name: 'Junior J2',
     description:
       'Аналитик с минимальным опытом, выполняет простые задачи под руководством опытных коллег.',
     education: {
@@ -490,7 +490,7 @@ export const SYSTEM_GRADES: Grade[] = [
     imageUrl: '/assets/junior2.png',
   },
   {
-    name: 'Junior L3',
+    name: 'Junior J3',
     description:
       'Аналитик с опытом 2-3 года, самостоятельно выполняет типовые задачи, взаимодействует с пользователями.',
     education: {
@@ -669,7 +669,7 @@ export const SYSTEM_GRADES: Grade[] = [
     imageUrl: '/assets/junior3.png',
   },
   {
-    name: 'Middle L1',
+    name: 'Middle M1',
     description:
       'Опытный аналитик (2-4 лет), самостоятельно ведет отдельные части проекта, взаимодействует с заказчиками.',
     education: {
@@ -847,7 +847,7 @@ export const SYSTEM_GRADES: Grade[] = [
     imageUrl: '/assets/middle1.jpg',
   },
   {
-    name: 'Middle L2',
+    name: 'Middle M2',
     description:
       'Опытный аналитик (от 4 лет), самостоятельно ведет отдельные части проекта, взаимодействует с заказчиками.',
     education: {
@@ -1025,7 +1025,7 @@ export const SYSTEM_GRADES: Grade[] = [
     imageUrl: '/assets/middle2.jpg',
   },
   {
-    name: 'Middle L3',
+    name: 'Middle M3',
     description:
       'Опытный аналитик (4-5 лет), ведет небольшие проекты или крупные функциональные блоки, управляет требованиями.',
     education: {
@@ -1217,7 +1217,7 @@ export const SYSTEM_GRADES: Grade[] = [
     imageUrl: '/assets/middle3.jpg',
   },
   {
-    name: 'Senior L1',
+    name: 'Senior S1',
     description:
       'Эксперт с 5-7 годами опыта, ведет сложные проекты целиком, управляет требованиями на всех этапах, отвечает за аналитику в крупных проектах.',
     education: {
@@ -1405,7 +1405,7 @@ export const SYSTEM_GRADES: Grade[] = [
     imageUrl: '/assets/senior1.jpg',
   },
   {
-    name: 'Senior L2',
+    name: 'Senior S2',
     description:
       'Эксперт с 7-10 годами опыта, ведет сложные проекты целиком, управляет требованиями на всех этапах, отвечает за аналитику в крупных проектах.',
     education: {
@@ -1583,7 +1583,7 @@ export const SYSTEM_GRADES: Grade[] = [
     imageUrl: '/assets/senior2.jpg',
   },
   {
-    name: 'Senior L3',
+    name: 'Senior S3',
     description:
       'Эксперт с 10+ годами опыта, выстраивает процессы аналитики в масштабах компании, управляет портфелем проектов, участвует в формировании бизнес-стратегии.',
     education: {
